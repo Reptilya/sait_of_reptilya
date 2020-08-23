@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>	
+<head> 
+	<title>наш сайт</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+	
+<body>
+<canvas id="ss">грюза</canvas>
+<script>
+var cc=document.getElementById("ss");
+var druw=cc.getContext("2d");
+cc.width=1000;
+cc.height= 2000;
+
+druw.beginPath();
+druw.arc(80, 100, 56, 3/4*Math.PI, 1/4*Math.PI, true);
+druw.fill();
+druw.moveTo(40, 140);
+druw.lineTo(20, 40);
+druw.lineTo(60, 100);
+druw.lineTo(80, 20);
+druw.lineTo(100, 100);
+druw.lineTo(140, 40);
+druw.lineTo(120, 140);
+druw.stroke();
+</script>
+</body>
+</html>

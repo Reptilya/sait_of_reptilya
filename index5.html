@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>	
+<head> 
+	<title>наш сайт</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+	
+<body>
+<canvas id="ss">грюза</canvas>
+<script>
+var cc=document.getElementById("ss");
+var druw=cc.getContext("2d");
+var grd=druw.createRadialGradient(75, 50, 5, 90, 60, 100);
+var lin=druw.createLinearGradient(200, 200, 400, 200);
+cc.width=1000;
+cc.height= 2000;
+druw.beginPath();
+druw.moveTo(10, 15);
+druw.bezierCurveTo(75, 55, 175, 20, 250, 15);
+druw.moveTo(10, 15);
+druw.quadraticCurveTo(100, 100, 250, 30);
+druw.stroke();
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "blue");
+druw.fillStyle=grd;
+druw.fillRect(10, 10, 140, 500);
+lin.addColorStop(0, "red");
+lin.addColorStop(1, "blue");
+druw.fillStyle=lin;
+druw.fillRect(200, 200, 400, 200);
+</script>
+</body>
+</html>
